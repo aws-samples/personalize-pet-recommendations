@@ -1,0 +1,24 @@
+{
+    "body": {
+        "userId":"12345",
+        "itemMetadataList":[{"itemId": "1",
+            "animalMetadata":{"animal_species_id": "2",
+                               "animal_primary_breed_id": "Saint_Bernard",
+                               "animal_size_id": "3",
+                               "animal_age_id": "2"}
+              },
+              {"itemId": "2",
+               "animalMetadata":{"animal_species_id": "1",
+                                   "animal_primary_breed_id": "Egyptian_Mau",
+                                   "animal_size_id": "1",
+                                   "animal_age_id": "1"}
+              },
+              {"itemId": "3",
+               "animalMetadata":{"animal_species_id": "2",
+                               "animal_primary_breed_id": "Saint_Bernard",
+                               "animal_size_id": "3",
+                               "animal_age_id": "2"}
+              }
+                                ]
+    }
+}

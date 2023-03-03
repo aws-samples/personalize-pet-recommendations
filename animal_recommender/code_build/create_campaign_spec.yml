@@ -1,0 +1,27 @@
+version: 0.2
+
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.9
+  build:
+    commands:
+      - pip install boto3
+      - python animal_recommender/code_build/create_campaign.py
+      - echo cfn_signal_url - $cfn_signal_url
+      - |
+        STATUS='SUCCESS'
+        if [ $CODEBUILD_BUILD_SUCCEEDING -ne 1 ] # Test if the build is failing
+        then
+          STATUS='FAILED'
+        fi
+        cat <<EOF > /tmp/payload.json
+        {
+          "Reason": "Campaign Creation",
+          "UniqueId": "ID11223344455",
+          "Data": "Creation Complete",
+          "Status": "$STATUS"
+        }
+        EOF
+        curl -vv -i -X PUT -H 'Content-Type:' -d "@/tmp/payload.json" "$cfn_signal_url"

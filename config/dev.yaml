@@ -1,0 +1,36 @@
+# Vpc must be created beforehand
+vpcId: vpc-12f9c768
+
+kinesisStreamNameSsmPath: /animal-recommender/kinesis-stream/name
+s3NameSsmPath: /animal-recommender/s3/name
+s3SeedNameSsmPath: /animal-recommender/s3-seed-bucket/name
+keyArnPath: /animal-recommender/kms-key/arn
+
+
+# Recommendations SSM
+recommendationCampaignArnSsmPath: /animal-recommender/personalize/recommendation/campaign/id
+getRecommendationNamePath: /animal-recommender/personalize/recommendation/function-name
+recommendationSolutionVersionSsmPath: /animal-recommender/personalize/recommendation/solution/version/arn
+eventTrackerIdSsmPath: /animal-recommender/personalize/event-tracker/id
+
+# Recommendations Campaign Config
+explorationWeight: 0.1
+explorationItemAgeCutOff: 65500
+
+# Recommendations TPS
+minProvisionedTPS: 1
+
+# Recommendations Model promotion Threshold
+promotionThreshold: 0.01
+
+
+# Reranking SSM
+rerankingCampaignArnSsmPath: /animal-recommender/personalize/reranking/campaign/id
+rerankingSolutionVersionSsmPath: /animal-recommender/personalize/reranking/solution/version/arn
+getRerankingNamePath: /animal-recommender/personalize/reranking/function-name
+
+# Rerank TPS
+reRankMinProvisionedTPS: 1
+
+# Rerank Flag
+rerankingEnabled: True

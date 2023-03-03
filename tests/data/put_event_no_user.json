@@ -1,0 +1,14 @@
+{
+    "Partitionkey": "234523532",
+    "Data": {
+        "sessionId": "sessionId4234123",
+        "eventType": "DetailView",
+        "animal_id": "forTheFullRecord1234",
+        "animalMetadata": {
+            "animal_species_id": "1",
+            "animal_primary_breed_id": "Russian_Blue",
+            "animal_size_id": "1",
+            "animal_age_id": "4"
+        }
+    }
+}
