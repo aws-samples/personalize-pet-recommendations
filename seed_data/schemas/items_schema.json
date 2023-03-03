@@ -1,0 +1,41 @@
+{
+    "type": "record",
+    "name": "Items",
+    "namespace": "com.amazonaws.personalize.schema",
+    "fields": [
+      {
+        "name": "ITEM_ID",
+        "type": "string"
+      },
+      {
+        "name": "ANIMAL_BREED",
+        "type": "string",
+        "categorical": true
+      },
+      {
+        "name": "ANIMAL_AGE",
+        "type": "string",
+        "categorical": true
+      },
+      {
+        "name": "ANIMAL_TYPE",
+        "type": "string",
+        "categorical": true
+      },
+      {
+        "name": "ANIMAL_SIZE",
+        "type": "string",
+        "categorical": true
+      },
+      {
+        "name": "item_value",
+        "type": "float",
+        "categorical": false
+      },
+      {
+        "name": "CREATION_TIMESTAMP",
+        "type": "long"
+      }
+    ],
+    "version": "1.0"
+}
